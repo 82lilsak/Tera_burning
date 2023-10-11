@@ -54,44 +54,38 @@ class WindowClass(QWidget, form_class) :
             self.list_198.sort()
 
             if self.my_lev in self.list_198:
-                print('198 레벨에 멍청이 퀘스트를 클리어 하면 200레벨 입니다.')
+                if self.my_lev == 198:
+                    print('캐릭터의 레벨이 198레벨이라 테라버닝 부스터를 사용하면 200 달성이 가능합니다. \n테라버닝 부스터 사용을 추천드리지 않고 199까지 레벨업을 하고 멍청이 퀘스트 클리어시 200이 됩니다.')
+                else:
+                    print('해당 레벨에 테라버닝 사용시 198 레벨에 멍청이 퀘스트를 클리어 하면 200레벨 입니다.')
 
             for i in range(1, 201, 3):
                 self.tera = 200 - i  # 반복 중에 199~ 3씩 뺀 값
                 self.list_idiot.append(self.tera)
-                self.to_tera = self.tera % 3  # 그 값에서 3으로 나눈 나머지
+            self.list_idiot.sort()
 
-            if self.to_tera == 1 and self.my_lev in self.list_idiot:  # 나머지 가 1 이고 내 래밸과 같은 경우
+            if self.my_lev in self.list_idiot:  # 입력한 레벨이 list_idiot에 있는경우
                 if self.my_lev == 199:
-                    self.idiot_flag = 1
-                    print('199 레벨이라 멍청이 퀘스트만 클리어 하면 200레벨 입니다.')
+
+                    print('199 레벨이라 테라버닝 부스터를 사용하지 않고 멍청이 퀘스트만 클리어 하면 200레벨 입니다.')
                 else:
-                    self.idiot_flag = 1
+
                     print('해당 레벨에 테라버닝 사용시 199 레벨에 종료됩니다.')
             #
-            if self.idiot_flag != 1 and self.need1lev in self.list_idiot:
-                if self.my_lev == 198:
-                    pass
-                else:
-                    print('1업만 더하면 199레벨에 테라버닝이 끝납니다. 199레벨 달성 이후에 멍청이 퀘스트를 클리어하십시오.')
-            # 195, 192, 189...
 
             for ii in range(0, 200, 3):
                 self.tera2 = 200 - ii  # 반복 중에 200~ 3씩 뺀 값
                 self.list_end200.append(self.tera2)
-
+            self.list_end200.sort()
             if self.my_lev in self.list_end200:  # 나머지 가 1 이고 내 래밸과 같은 경우
                 if self.my_lev == 200:
-                    self.maxlev_flag = 1
+
                     print('이미 200레벨 이어서 테라버닝 사용이 불가능 합니다.')
                 else:
-                    self.maxlev_flag = 1
-                    print('해당 레벨에 테라버닝 사용시 200 레벨에 마무리 됩니다.')
-            if self.maxlev_flag != 1 and self.need1lev in self.list_end200:
-                print('1업만 더하면 200레벨에 테라버닝이 마무리 됩니다.')
 
-            if self.my_lev == 198:
-                print('캐릭터의 레벨이 198레벨이라 테라버닝 부스터를 사용하면 199레벨 까지밖에 오르지 않습니다. \n테라버닝 부스터 사용을 추천드리지 않고 199까지 레벨업을 하고 멍청이 퀘스트 클리어시 200이 됩니다.')
+                    print('해당 레벨에 테라버닝 사용시 200 레벨에 마무리 됩니다.')
+
+
 
             self.nu = self.list_198 + self.list_idiot + self.list_end200
             self.nu.sort()
