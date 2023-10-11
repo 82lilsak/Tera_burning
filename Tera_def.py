@@ -35,6 +35,10 @@ class WindowClass(QWidget, form_class) :
         if btn.objectName() == 'btn_tera':
         # 시그널을 보낸 버튼 오브젝트의 이름이 btn_tera 이면 이후 구문 실행.
             pass
+        # 1) text 입력을 한 이후 버튼 클릭
+        # 2) read 한 텍스트를 int로 변환
+        # 3) 리스트에 if문 건 연산을 먼저 하고? 이걸 함수로 바꿔야함.
+        # 4) lbl_text 에 if문 을 사용 하여 set text 를 활용 하여 결과 값을 출력 해야 한다.
 
 
 
