@@ -9,9 +9,17 @@ maxl = 0
 
 tera2 = 0
 list_idiot = []
+# 10, 13 에서 시작.. 199 마무리
 list_end200 = []
+# 11, 14 에서 시작.. 200 마무리
 need1lev = my_lev + 1
+list_198 = []
+# 12, 15 에서 시작.. 198 마무리? 198에서 렙업하면 200임?
 
+for i in range(0,189,3):
+    p = 198-i
+    list_198.append(p)
+list_198.sort()
 
 for i in range(1, 201, 3):
     tera = 200-i    # 반복 중에 199~ 3씩 뺀 값
