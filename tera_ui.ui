@@ -117,7 +117,7 @@
      <item>
       <widget class="QLabel" name="lbl_text">
        <property name="text">
-        <string>TextLabel</string>
+        <string/>
        </property>
        <property name="scaledContents">
         <bool>false</bool>

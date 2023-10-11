@@ -26,6 +26,16 @@ class WindowClass(QWidget, form_class) :
     def __init__(self) :
         super().__init__()
         self.setupUi(self)
+        self.btn_tera.clicked.connect(self.btn_clicked_slot)
+
+    def btn_clicked_slot(self):
+        btn = self.sender() # 누가 보냈는지 확인 할수 있다.
+        # btn signal을 누가 보냈는지 확인 하기 위해 사용.
+        # 시그널을 보낸 버튼 오브젝트의 이름이 다음과 같으면 구문 실행.
+        if btn.objectName() == 'btn_tera':
+        # 시그널을 보낸 버튼 오브젝트의 이름이 btn_tera 이면 이후 구문 실행.
+            pass
+
 
 
 if __name__ == "__main__" :
