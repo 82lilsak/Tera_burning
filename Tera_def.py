@@ -36,6 +36,8 @@ class WindowClass(QWidget, form_class) :
         self.need1lev = self.my_lev + 1
         self.list_198 = []
         self.nu = []
+        # 아랫줄 text lbl 이름
+        # lbl_text_info
 
     def btn_clicked_slot(self):
         btn = self.sender() # 누가 보냈는지 확인 할수 있다.
@@ -55,9 +57,10 @@ class WindowClass(QWidget, form_class) :
 
             if self.my_lev in self.list_198:
                 if self.my_lev == 198:
-                    print('캐릭터의 레벨이 198레벨이라 테라버닝 부스터를 사용하면 200 달성이 가능합니다. \n테라버닝 부스터 사용을 추천드리지 않고 199까지 레벨업을 하고 멍청이 퀘스트 클리어시 200이 됩니다.')
+                    self.lbl_text_info.setText('캐릭터의 레벨이 198레벨이라 테라버닝 부스터를 사용하면 200 달성이 가능합니다. \n테라버닝 부스터 사용을 추천드리지 않고 199까지 레벨업을 하고 멍청이 퀘스트 클리어시 200이 됩니다.')
+
                 else:
-                    print('해당 레벨에 테라버닝 사용시 198 레벨에 멍청이 퀘스트를 클리어 하면 200레벨 입니다.')
+                    self.lbl_text_info.setText('해당 레벨에 테라버닝 사용시 198 레벨에 멍청이 퀘스트를 클리어 하면 200레벨 입니다.')
 
             for i in range(1, 201, 3):
                 self.tera = 200 - i  # 반복 중에 199~ 3씩 뺀 값
@@ -67,10 +70,10 @@ class WindowClass(QWidget, form_class) :
             if self.my_lev in self.list_idiot:  # 입력한 레벨이 list_idiot에 있는경우
                 if self.my_lev == 199:
 
-                    print('199 레벨이라 테라버닝 부스터를 사용하지 않고 멍청이 퀘스트만 클리어 하면 200레벨 입니다.')
+                    self.lbl_text_info.setText('199 레벨이라 테라버닝 부스터를 사용하지 않고 멍청이 퀘스트만 클리어 하면 200레벨 입니다.')
                 else:
 
-                    print('해당 레벨에 테라버닝 사용시 199 레벨에 종료됩니다.')
+                    self.lbl_text_info.setText('해당 레벨에 테라버닝 사용시 199 레벨에 종료됩니다.')
             #
 
             for ii in range(0, 200, 3):
@@ -80,25 +83,15 @@ class WindowClass(QWidget, form_class) :
             if self.my_lev in self.list_end200:  # 나머지 가 1 이고 내 래밸과 같은 경우
                 if self.my_lev == 200:
 
-                    print('이미 200레벨 이어서 테라버닝 사용이 불가능 합니다.')
+                    self.lbl_text_info.setText('이미 200레벨 이어서 테라버닝 사용이 불가능 합니다.')
                 else:
 
-                    print('해당 레벨에 테라버닝 사용시 200 레벨에 마무리 됩니다.')
-
-
+                    self.lbl_text_info.setText('해당 레벨에 테라버닝 사용시 200 레벨에 마무리 됩니다.')
 
             self.nu = self.list_198 + self.list_idiot + self.list_end200
             self.nu.sort()
-            # self.nu 에 10~ 200 까지 모든 레벨 이 들어있음...
 
-        # 1) text 입력을 한 이후 버튼 클릭
-        # Done
-        # 2) read 한 텍스트를 int로 변환
-        # Done
-        # 3) 리스트에 if문 건 연산을 먼저 하고? 이걸 함수로 바꿔야함.
-        # fail  .. 그냥 버튼클릭 함수에 그 긴거 집어넣음
-        # 4) lbl_text 에 if문 을 사용 하여 set text 를 활용 하여 결과 값을 출력 해야 한다.
-        # pass
+
 
 
 
