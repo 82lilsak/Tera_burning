@@ -36,6 +36,7 @@ class WindowClass(QWidget, form_class) :
         self.need1lev = self.my_lev + 1
         self.list_198 = []
         self.nu = []
+        self.need = 0
         # 아랫줄 text lbl 이름
         # lbl_text_info
 
@@ -48,7 +49,19 @@ class WindowClass(QWidget, form_class) :
             self.my_lev = int(self.lbl_line.text())
             print(self.my_lev)
             print(type(self.my_lev))
-            self.lbl_text_write.setText('입력하신 캐릭터의 레벨은 {} 입니다.'.format(self.my_lev))
+            self.need = (200 - self.my_lev) // 3
+            self.lbl_text_write.setText('입력하신 캐릭터의 레벨은 {} 입니다.\n{}번 더 레벨업 해야 합니다.'.format(self.my_lev, self.need))
+
+
+
+
+
+
+
+
+
+
+
 
             for i in range(0, 189, 3):
                 p = 198 - i
