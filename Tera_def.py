@@ -73,7 +73,7 @@ class WindowClass(QWidget, form_class) :
                     self.lbl_text_info.setText('캐릭터의 레벨이 198레벨이라 테라버닝 부스터를 사용하면 200 달성이 가능합니다. \n테라버닝 부스터 사용을 추천드리지 않고 199까지 레벨업을 하고 멍청이 퀘스트 클리어시 200이 됩니다.')
 
                 else:
-                    self.lbl_text_info.setText('해당 레벨에 테라버닝 사용시 198 레벨에 멍청이 퀘스트를 클리어 하면 200레벨 입니다.')
+                    self.lbl_text_info.setText('해당 레벨에 테라버닝 사용시 \n198 레벨에 멍청이 퀘스트를 클리어 하거나\n 사냥을 하여 레벨업을 하면 200레벨 입니다.')
 
             for i in range(1, 201, 3):
                 self.tera = 200 - i  # 반복 중에 199~ 3씩 뺀 값
@@ -83,7 +83,7 @@ class WindowClass(QWidget, form_class) :
             if self.my_lev in self.list_idiot:  # 입력한 레벨이 list_idiot에 있는경우
                 if self.my_lev == 199:
 
-                    self.lbl_text_info.setText('199 레벨이라 테라버닝 부스터를 사용하지 않고 멍청이 퀘스트만 클리어 하면 200레벨 입니다.')
+                    self.lbl_text_info.setText('199 레벨이라 테라버닝 부스터를 사용하지 않고\n멍청이 퀘스트만 클리어 하면 200레벨 입니다.')
                 else:
 
                     self.lbl_text_info.setText('해당 레벨에 테라버닝 사용시 199 레벨에 종료됩니다.')

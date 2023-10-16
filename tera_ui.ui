@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>575</width>
+    <width>581</width>
     <height>760</height>
    </rect>
   </property>
@@ -17,7 +17,7 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>테라버닝계산기</string>
   </property>
   <property name="windowIcon">
    <iconset>
@@ -25,7 +25,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
-    <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,3,4,4">
+    <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,3,4">
      <property name="sizeConstraint">
       <enum>QLayout::SetFixedSize</enum>
      </property>
@@ -133,25 +133,38 @@
      </item>
      <item>
       <widget class="QLabel" name="lbl_text_write">
+       <property name="font">
+        <font>
+         <family>CookieRun Bold</family>
+         <pointsize>17</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QLabel" name="lbl_text_info">
+       <property name="font">
+        <font>
+         <family>CookieRun Bold</family>
+         <pointsize>17</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
        <property name="text">
         <string/>
        </property>
        <property name="scaledContents">
         <bool>false</bool>
        </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="lbl_text_huntlist">
-       <property name="text">
-        <string/>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
