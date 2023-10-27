@@ -21,7 +21,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>C:/Users/isak0/OneDrive/바탕 화면/terab.png</normaloff>C:/Users/isak0/OneDrive/바탕 화면/terab.png</iconset>
+    <normaloff>terab.png</normaloff>terab.png</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
@@ -92,6 +92,14 @@
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <family>CookieRun Bold</family>
+             <pointsize>14</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
            </property>
           </widget>
          </item>

@@ -1,10 +1,11 @@
-
+import os
 import sys
 
 from PyQt5.QtGui import QIntValidator
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
-
+from PyQt5.QtGui import QFontDatabase
+from PyQt5.QtGui import QFont
 
 
 
@@ -20,13 +21,25 @@ class WindowClass(QWidget, form_class) :
         self.setupUi(self)
         self.btn_tera.clicked.connect(self.btn_clicked_slot)
 
+        # 폰트 지정.
+        # 폰트 파일 경로를 지정합니다.
+        # 폰트를 애플리케이션에 추가합니다.
+        font_path = './CookieRun Bold.ttf'
+        font_id = QFontDatabase.addApplicationFont(font_path)
+        font = QFont('CookieRun Bold.ttf', 12)  # 폰트, 크기
+        QApplication.setFont(font)
+
+        if font_id != -1:
+            # 폰트가 성공적으로 추가되었을 때의 처리
+            print(f'폰트가 성공적으로 추가되었습니다. ID: {font_id}')
+        else:
+            # 폰트 추가에 실패했을 때의 처리
+            print('폰트 추가에 실패했습니다.')
         # values
         self.my_lev = 0
         self.read_text = 0
         self.tera = 0
         self.to_tera = 0
-        self.idiot_flag = 0
-        self.maxlev_flag = 0
 
         self.tera2 = 0
         self.list_idiot = []
@@ -51,17 +64,6 @@ class WindowClass(QWidget, form_class) :
             print(type(self.my_lev))
             self.need = (200 - self.my_lev) // 3
             self.lbl_text_write.setText('입력하신 캐릭터의 레벨은 {} 입니다.\n{}번 더 레벨업 해야 합니다.'.format(self.my_lev, self.need))
-
-
-
-
-
-
-
-
-
-
-
 
             for i in range(0, 189, 3):
                 p = 198 - i
